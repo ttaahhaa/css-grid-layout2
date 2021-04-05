@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.document{
+    display: grid;
+    height: 100vh;
+    background-color:#eee;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    grid-template-areas: "head head head head head head head head head head"
+                         "nav nav nav nav nav nav nav nav nav nav"
+                         "aside aside aside cont cont cont cont cont cont cont"
+                         "aside aside aside sec sec sec sec sec sec sec"
+                         "foot foot foot foot foot foot foot foot foot foot";
+    text-align: center;
+    color: white;
+    font-size: 30px;
+                         
+}
+footer{
+    grid-area: foot;
+    background-color: #53D0C0;
+}
+section{
+    grid-area: sec;
+    background-color: #115095;
+}
+.cont{
+    grid-area: cont;
+    background-color: #C0EBFB;
+}
+aside{
+    grid-area: aside;
+    background-color: #51c9b3;
+    text-align: left;
+}
+
+nav{
+    grid-area: nav;
+}
+header{
+    grid-area: head;
+    background-color: #C0EBFB;
+    text-align: center;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+nav ul li {
+    list-style-type: none;
+    text-decoration: none;
+    width: calc(100% / 4 - 4px);
+    cursor: pointer;
+    background-color: #67D75B;
+    text-transform: uppercase;
+    padding-top: 40px;
+}
+
